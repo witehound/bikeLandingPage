@@ -37,26 +37,26 @@
         <div class="wrapper">
           <div class="wrap">
             <div class="img">
-              <img src="./img/n1.png" alt="" class="headimg" />
+              <img src="./img/n1.png" alt="" class="headimg elmt" />
             </div>
           </div>
           <div class="slidebar">
             <ul id="slideimg">
-              <li class="btn">
+              <li class="btn elmt one">
                 <img
                   src="./img/n2.png"
                   alt=""
                   onclick="imageSlider('./img/n2.png')"
                 />
               </li>
-              <li class="btn active">
+              <li class="btn active elmt two">
                 <img
                   src="./img/n1.png"
                   alt=""
                   onclick="imageSlider('./img/n1.png')"
                 />
               </li>
-              <li class="btn">
+              <li class="btn elmt three">
                 <img
                   src="./img/n3.png"
                   alt=""
@@ -68,14 +68,14 @@
         </div>
         <div class="txt">
           <div>
-            <h1>Be A Rider</h1>
-            <p>
+            <h1 class="elmt h1">Be A Rider</h1>
+            <p class="elmt">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
               minus, non vero veritatis dolores doloremque blanditiis officia
               architecto beatae hic illo sed pariatur quos, distinctio odit.
               Inventore earum exercitationem quia?
             </p>
-            <a href=""> Click To Ride </a>
+            <a href="" class="elmt anc"> Click To Ride </a>
           </div>
         </div>
       </div>
@@ -99,6 +99,29 @@
           this.className += " active";
         });
       }
+
+      // change txt color according to the image
+      let h1 = document.querySelector(".h1");
+      let anchor = document.querySelector(".anc");
+      let one = document.querySelector(".one");
+      let two = document.querySelector(".two");
+      let three = document.querySelector(".three");
+
+      three.addEventListener("click", () => {
+        h1.style.color = "#f33333";
+        anchor.style.background = "#f33333";
+        anchor.style.border = "2px solid #f33333";
+      });
+      two.addEventListener("click", () => {
+        h1.style.color = "#252525";
+        anchor.style.background = "#252525";
+        anchor.style.border = "2px solid #252525";
+      });
+      one.addEventListener("click", () => {
+        h1.style.color = "#3aa0e7";
+        anchor.style.background = "#3aa0e7";
+        anchor.style.border = "2px solid #3aa0e7";
+      });
     </script>
   </body>
 </html>
