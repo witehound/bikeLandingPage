@@ -37,19 +37,31 @@
         <div class="wrapper">
           <div class="wrap">
             <div class="img">
-              <img src="./img/n1.png" alt="" />
+              <img src="./img/n1.png" alt="" class="headimg" />
             </div>
           </div>
           <div class="slidebar">
             <ul id="slideimg">
               <li class="btn">
-                <img src="./img/n2.png" alt="" />
+                <img
+                  src="./img/n2.png"
+                  alt=""
+                  onclick="imageSlider('./img/n2.png')"
+                />
               </li>
               <li class="btn">
-                <img src="./img/n1.png" alt="" />
+                <img
+                  src="./img/n1.png"
+                  alt=""
+                  onclick="imageSlider('./img/n1.png')"
+                />
               </li>
               <li class="btn">
-                <img src="./img/n3.png" alt="" />
+                <img
+                  src="./img/n3.png"
+                  alt=""
+                  onclick="imageSlider('./img/n3.png')"
+                />
               </li>
             </ul>
           </div>
@@ -70,6 +82,11 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="./script.js"></script>
-    <script></script>
+    <script>
+      //image slide
+      const imageSlider = (e) => {
+        document.querySelector(".headimg").src = e;
+      };
+    </script>
   </body>
 </html>
