@@ -49,7 +49,7 @@
                   onclick="imageSlider('./img/n2.png')"
                 />
               </li>
-              <li class="btn">
+              <li class="btn active">
                 <img
                   src="./img/n1.png"
                   alt=""
@@ -87,6 +87,18 @@
       const imageSlider = (e) => {
         document.querySelector(".headimg").src = e;
       };
+
+      //active class
+      let slideImage = document.getElementById("slideimg");
+      let btns = document.getElementsByClassName("btn");
+
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          let current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", " ");
+          this.className += " active";
+        });
+      }
     </script>
   </body>
 </html>
